@@ -1,0 +1,162 @@
+.userName-section{
+background-color: #222;
+color: #fff;
+padding: .1rem 2rem;
+text-align: end;
+}
+
+.main-navbar-section{
+width:100%;
+margin:auto;
+height: 80px;
+position: fixed;
+top:0px;
+left: 50%;
+transform: translate(-50%);
+z-index: 9999;
+}
+
+.navbarItems{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 30px;
+box-shadow: 0 5px 15px rgb(0,0,0,.25);
+width:100%;
+margin:auto;
+height: 80px;
+/* position: fixed;
+top:0px; */
+/* left: 50%;    */
+/* transform: translate(-50%); */
+/* z-index: 9999; */
+background-color: #fff;
+}
+.navbar-logo{
+    color:#222;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    gap:10px;
+    list-style: none;
+    align-items: center;
+}
+.nav-menu a{
+    text-decoration: none;
+    color: #222;
+    font-size:1.2rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+}
+.nav-link{
+       padding-right: 10px;
+
+}
+.nav-link:hover{
+    background-color: #209b9f;
+    color:white;
+    border-radius:10px;
+    transition:  all 0.2 ease-in-out;
+}
+/* .icon{
+    padding-top: 2px;
+} */
+.button-signup{
+    display: none;
+}
+button{
+    padding: 0.5rem;
+    white-space: nowrap;
+    border-radius:0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #151516;
+    color: #fff;
+}
+.menu-icons{
+    display: none;
+}
+
+@media screen  and (max-width:850px){
+
+    .navbarItems{
+        z-index: 99;
+    }
+    .menu-icons{
+  display: block;
+  cursor: pointer;
+    }
+    .menu-icons .i{
+        font-size: 1.2rem;
+        color:#222;
+
+    }
+    
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color:#fff;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        opacity: 0;
+        align-items: stretch;
+        padding:95px 0 30px 0;
+        margin: 0;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        border-radius: 10px;
+      
+    }
+
+    .nav-menu.active{
+      right: 0;
+      opacity: 1;
+      z-index: -1;
+      transition: 0.3s ease-in-out;
+    }
+    .nav-link{
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+    }
+    .nav-link:hover{
+        background-color: #01959a;
+        transition: none;
+        border-radius:0;
+    }
+    button{
+      display: none;  
+    }
+    .button-signup{
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: auto;
+        border-radius: 4px;
+        width: 80%;
+        background-color:#01959a;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    .userName-section{
+        padding: 0px 5px;
+        font-size:.7rem;
+    }
+
+}
