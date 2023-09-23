@@ -1,8 +1,11 @@
 import React from 'react'
 import "../styles/Service.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const ProductList = (props) => {
+  const navigate=useNavigate()
 const {id,image,name,price,qty}=props;
+
 const handlecart=(id)=>{
     console.log(id)
     const payload={
@@ -12,7 +15,7 @@ const handlecart=(id)=>{
 axios.post(`https://chocolates-8z1x.onrender.com/cart`,payload).then(({data})=>{
     console.log(data);
     alert('Add successful in card 😊')
-    window.location="/service"
+    navigate("/cart")
 }).catch((err)=>{
     console.log(err);
 })
